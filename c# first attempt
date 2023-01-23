@@ -1,0 +1,36 @@
+using System;
+
+namespace YourNewPokemon
+{
+  class Program
+  {
+    // [data-type] [identifier] [assignment operator] [value] // Variable Declaration
+    
+    static void Main(string[] args)
+    {
+    	int spd = 65;
+        int SpclAtt = 60;
+        double wght = 19.456d;
+        char type = 'F';
+        char sunglasses = 'Y';
+        string nick = "Coal";
+        string poke ="Charmander";
+        bool shiny = false;
+        bool cool = true;
+        float height = 2f;
+        
+        
+      Console.WriteLine(spd); 
+      Console.WriteLine(SpclAtt);
+      Console.WriteLine(wght);
+      Console.WriteLine(type);
+      Console.WriteLine(sunglasses);
+      Console.WriteLine(nick);
+      Console.WriteLine(poke);
+      Console.WriteLine(shiny);
+      Console.WriteLine(cool);
+      Console.WriteLine(height);
+      
+    }
+  }
+}
