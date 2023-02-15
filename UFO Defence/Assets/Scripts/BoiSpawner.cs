@@ -5,12 +5,12 @@ using UnityEngine;
 public class BoiSpawner : MonoBehaviour
 {
 
-    public GameObject[] daBoi;
+    public GameObject[] daBoiPrefabs;
     public int daBoiIndex;
-    public float xSpawnRange = 27;
-    public float ySpawnPos;
-    public float startDelay = 0.5f;
-    public float spawnInterval = 1.5f;
+    public float spawnRangeX = 27;
+    public float spawnPosZ;
+    public float startDelay = 2f;
+    public float spawnInterval = 2f;
 
     // Start is called before the first frame update
     void Start()
@@ -21,10 +21,10 @@ public class BoiSpawner : MonoBehaviour
    void SpawnRandomDaBoi()
    {
         //Generate the x spawn position
-        Vector3 spawnPos = new Vector3(Random.Range(-xSpawnRange, xSpawnRange), ySpawnPos, 0);
-
+        Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
+        int daBoiIndex = Random.Range(0,daBoiPrefabs.Length);
         //spawn random Dabois on the X-Axis
-        Instantiate(daBoi[daBoiIndex], spawnPos, daBoi[daBoiIndex].transform.rotation);
+        Instantiate(daBoiPrefabs[daBoiIndex], spawnPos, daBoiPrefabs[daBoiIndex].transform.rotation);
 
    }
 }
