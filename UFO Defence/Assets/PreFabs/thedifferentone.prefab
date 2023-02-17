@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 8687096056458647065}
   - component: {fileID: 979233022069215339}
   - component: {fileID: -2569943748244505231}
-  - component: {fileID: 7605806923198238739}
+  - component: {fileID: -9156948718401920921}
   m_Layer: 0
   m_Name: thedifferentone
   m_TagString: Untagged
@@ -193,7 +193,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8687096056458647070}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
---- !u!114 &7605806923198238739
+--- !u!114 &-9156948718401920921
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -236,8 +236,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8687096056458647070}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea2d7ceeb04344b6db56dac767498d28, type: 3}
+  m_Script: {fileID: 11500000, guid: 9d1ad5c3d017d48b996a7f5b60f404be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  topBounds: 30
-  lowerBounds: -20

@@ -110,8 +110,9 @@ GameObject:
   - component: {fileID: 8687096056458647064}
   - component: {fileID: 8687096056458647065}
   - component: {fileID: 979233022069215339}
-  - component: {fileID: -2187128537344388934}
   - component: {fileID: 1334122973201375386}
+  - component: {fileID: -7129649908838308008}
+  - component: {fileID: -8772814847666141930}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Untagged
@@ -193,7 +194,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8687096056458647070}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -214,20 +215,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-2187128537344388934
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8687096056458647070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea2d7ceeb04344b6db56dac767498d28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  topBounds: 30
-  lowerBounds: -20
 --- !u!114 &1334122973201375386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,3 +228,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
+--- !u!114 &-7129649908838308008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8687096056458647070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d1ad5c3d017d48b996a7f5b60f404be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-8772814847666141930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8687096056458647070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea2d7ceeb04344b6db56dac767498d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topBounds: 30
+  lowerBounds: -20

@@ -6,22 +6,22 @@ using TMPro;
 public class Inventory : MonoBehaviour
 {
     public int daBois; //Keep track of the game score
-    public TextMeshProUGUI daBoisText; // reference to a text object to be modified
+    public TextMeshProUGUI InventoryText; // reference to a text object to be modified
 
     // Start is called before the first frame update
     void Start()
     {
-        UpdateDaBoisText();
+        UpdateInventoryText();
     }
 
-   public void IncreaseDaboisText(int amount)
+   public void IncreaseInventoryText(int amount)
    {
         daBois += amount;
-        UpdateDaBoisText();
+        UpdateInventoryText();
    }
     
-   public void UpdateDaBoisText()
+   public void UpdateInventoryText()
    {
-        daBoisText.text = "DaBois: " + daBois;
+        InventoryText.text = "Inventory: " + daBois;
    }
 }
