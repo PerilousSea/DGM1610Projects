@@ -9,6 +9,7 @@ public class Collison_Boi : MonoBehaviour
         if (other.gameObject.tag == "treasure")
         {
             Destroy(gameObject);
+            Debug.Log("YOU GOT A TREASURE!");
         }
     }
 }
