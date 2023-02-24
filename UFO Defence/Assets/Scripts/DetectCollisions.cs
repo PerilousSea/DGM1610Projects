@@ -19,9 +19,10 @@ public class DetectCollisions : MonoBehaviour
         {
             Destroy(gameObject); //Destroy UFO
             Destroy(other.gameObject); //Destroy LazerBolt
+            scoreManager.IncreaseScore(scoreToGive);
         }
-        // Explosion();
-        scoreManager.IncreaseScore(scoreToGive);
+        
+       
        
     }
 }

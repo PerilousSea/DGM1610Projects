@@ -240,6 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1ad5c3d017d48b996a7f5b60f404be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreToGive: 50
 --- !u!114 &-8772814847666141930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,3 +255,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topBounds: 30
   lowerBounds: -20
+  scoreManager: {fileID: 0}

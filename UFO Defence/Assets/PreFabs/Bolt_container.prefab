@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3020438791085646984}
   - component: {fileID: 8308965035054063294}
-  - component: {fileID: -817237544519169931}
+  - component: {fileID: -7957632686226695274}
   m_Layer: 0
   m_Name: Bolt_container
   m_TagString: Untagged
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
---- !u!114 &-817237544519169931
+--- !u!114 &-7957632686226695274
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
