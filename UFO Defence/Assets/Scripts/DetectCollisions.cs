@@ -6,6 +6,7 @@ public class DetectCollisions : MonoBehaviour
 {
     private ScoreManager scoreManager;
     public int scoreToGive;
+    public ParticleSystem explosionParticle;
 
     // Start is called before the first frame update
     void Start()
@@ -20,9 +21,13 @@ public class DetectCollisions : MonoBehaviour
             Destroy(gameObject); //Destroy UFO
             Destroy(other.gameObject); //Destroy LazerBolt
             scoreManager.IncreaseScore(scoreToGive);
+            Explosion();
         }
+         
+    }
+    void Explosion()
+    {
+        Instantiate(explosionParticle, transform.position, transform.rotation);
         
-       
-       
     }
 }

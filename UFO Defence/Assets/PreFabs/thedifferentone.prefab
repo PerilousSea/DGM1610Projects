@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c9a41054cdd3424eb38bc0cf2a8b0af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 2
 --- !u!114 &-9156948718401920921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,6 +241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreToGive: 200
+  explosionParticle: {fileID: 3319465173540255732, guid: cbc36c595fb4e4a95820b81816a79f8c, type: 3}
 --- !u!114 &-8269221867215768121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,4 +256,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topBounds: 30
   lowerBounds: -15
-  scoreManager: {fileID: 0}
+  scoreManager: {fileID: 1122312052427116492, guid: bf50e12c9e6ae4060bf0544d3c626f02, type: 3}

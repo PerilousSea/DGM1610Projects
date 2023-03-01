@@ -127,6 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topBounds: 30
   lowerBounds: -20
+  scoreManager: {fileID: 1122312052427116492, guid: bf50e12c9e6ae4060bf0544d3c626f02, type: 3}
 --- !u!54 &-1490042571593053367
 Rigidbody:
   m_ObjectHideFlags: 0
