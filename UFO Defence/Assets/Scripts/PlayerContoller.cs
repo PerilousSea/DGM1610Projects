@@ -9,6 +9,10 @@ public class PlayerContoller : MonoBehaviour
     public float xRange = 27;
     public Transform blaster;
     public GameObject lazerBolt;
+    // Audio variables
+    [SerializeField] private AudioSource blasterAudio;
+    
+
 
     // Update is called once per frame
     void Update()
@@ -30,6 +34,7 @@ public class PlayerContoller : MonoBehaviour
         // if spacebar is pressed fire lazerBolt
         if(Input.GetKeyDown(KeyCode.Space))
         {
+            blasterAudio.Play();
             //Create lazerBolt at the blaster transform position maintainin objects at rotation
             Instantiate(lazerBolt, blaster.transform.position, lazerBolt.transform.rotation);
         }

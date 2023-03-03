@@ -242,6 +242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreToGive: 200
   explosionParticle: {fileID: 3319465173540255732, guid: cbc36c595fb4e4a95820b81816a79f8c, type: 3}
+  Exploding: {fileID: 0}
 --- !u!114 &-8269221867215768121
 MonoBehaviour:
   m_ObjectHideFlags: 0
