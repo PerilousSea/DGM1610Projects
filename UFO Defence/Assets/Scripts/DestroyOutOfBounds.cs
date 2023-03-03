@@ -8,7 +8,8 @@ public class DestroyOutOfBounds : MonoBehaviour
     public float lowerBounds = -15.0f;
     public ScoreManager scoreManager;
     private DetectCollisions detectCollisions;
-
+    [SerializeField] AudioSource GameOverlol;
+    
 
     // Update is called once per frame
     void Update()
@@ -21,11 +22,13 @@ public class DestroyOutOfBounds : MonoBehaviour
        {
             scoreManager.DecreaseScore(detectCollisions.scoreToGive);
             Destroy(gameObject);
+            GameOverlol.Play();
             //Time.timeScale = 0;
        }
     }
     void Start()
    {
+      
       scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
       detectCollisions = GetComponent<DetectCollisions>();
    }

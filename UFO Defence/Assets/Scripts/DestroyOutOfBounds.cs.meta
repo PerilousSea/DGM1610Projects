@@ -3,7 +3,10 @@ guid: ea2d7ceeb04344b6db56dac767498d28
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - scoreManager: {fileID: 1122312052427116492, guid: bf50e12c9e6ae4060bf0544d3c626f02, type: 3}
+  - GameOverlol: {fileID: 8300000, guid: a235d590ef2a04d1b85b61ef4c21337c, type: 3}
+  - OhNo: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
