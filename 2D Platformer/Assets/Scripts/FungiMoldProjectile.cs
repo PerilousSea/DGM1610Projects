@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FungiMoldProjectile : MonoBehaviour
 {
-    public float speed = 30.0f;
+    public float Speed = 30.0f;
     public int damage = 1;
     private Rigidbody2D rb;
 
@@ -17,7 +17,7 @@ public class FungiMoldProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += -transform.right * Time.deltaTime * speed;
+        transform.position += -transform.right * Time.deltaTime * Speed;
     }
     void OnTriggerEnter2D(Collider2D other) 
     {
@@ -26,7 +26,8 @@ public class FungiMoldProjectile : MonoBehaviour
         if(other.gameObject.CompareTag("Enemy"))
         {
                 enemy.TakeDamage(damage);
+                Destroy(gameObject);
         }
-        Destroy(gameObject);
+        
     }
 }

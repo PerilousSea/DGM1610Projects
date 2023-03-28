@@ -18,5 +18,6 @@ public class RangedAttack : MonoBehaviour
     void Shoot()
     {
         Instantiate(fungiMold, firePoint.position, firePoint.rotation);
-    }
+    } 
+
 }
