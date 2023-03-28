@@ -18,7 +18,7 @@ public class Collisions : MonoBehaviour
     {
        if (other.gameObject.tag == "Spore")
         {
-            Debug.Log("Lil' Spore Recieved"); //I'm checking here if the collision worked
+            Debug.Log("Spore Child Consumed...You Monster."); //I'm checking here if the collision worked
             Destroy(other.gameObject); //Pickin up a little spore :)
             inventoryManager.IncreaseInventory();  
         }

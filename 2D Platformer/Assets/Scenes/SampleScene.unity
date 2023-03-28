@@ -510,6 +510,7 @@ GameObject:
   - component: {fileID: 634306083}
   - component: {fileID: 634306082}
   - component: {fileID: 634306087}
+  - component: {fileID: 634306088}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -662,6 +663,19 @@ MonoBehaviour:
   speed: 2
   rayDistance: 0.5
   groundDetection: {fileID: 1710098342}
+--- !u!114 &634306088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634306081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ceba52299944de596c0b7939c937f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1 &648281108
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,6 +691,7 @@ GameObject:
   - component: {fileID: 648281111}
   - component: {fileID: 648281114}
   - component: {fileID: 648281115}
+  - component: {fileID: 648281116}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -847,6 +862,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 818281935}
   fungiMold: {fileID: 3371698369309576998, guid: e1b7cdb34d4904f7999bfb82873c08c6, type: 3}
+--- !u!114 &648281116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648281108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1956b3bf4a3cc49579cab8477484f138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  currentHealth: 0
 --- !u!1 &818281934
 GameObject:
   m_ObjectHideFlags: 0
