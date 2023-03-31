@@ -10,12 +10,12 @@ public class InventoryManager : MonoBehaviour
     int inventory = 0;
     void Start()
     {
-        inventoryText.text = "Inventory: " + inventory.ToString();
+        inventoryText.text = "Spores: " + inventory.ToString();
     }
     public void IncreaseInventory()
     {
         inventory += 1;
-        inventoryText.text = "Inventory: " + inventory.ToString();
+        inventoryText.text = "Spores: " + inventory.ToString();
     }
     /*
     public int inventory;
