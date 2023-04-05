@@ -691,6 +691,7 @@ GameObject:
   - component: {fileID: 648281111}
   - component: {fileID: 648281114}
   - component: {fileID: 648281115}
+  - component: {fileID: 648281119}
   - component: {fileID: 648281116}
   - component: {fileID: 648281117}
   - component: {fileID: 648281118}
@@ -759,7 +760,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1976089544, guid: e1df57435ac4f450bb35fef8a49477ff, type: 3}
+  m_Sprite: {fileID: 164324532, guid: 28c0c84aaa49c485b9930ed1cae31e8b, type: 3}
   m_Color: {r: 1, g: 0.98823535, b: 0.8745099, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -790,6 +791,22 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   doubleJump: 1
+  animator: {fileID: 648281118}
+  OnLandEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 648281119}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: OnLanding
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!61 &648281112
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -917,6 +934,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &648281119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648281108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 985a46430cb244cfe90b1f18f987818b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 648281111}
+  animator: {fileID: 648281118}
+  runSpeed: 40
 --- !u!1 &818281934
 GameObject:
   m_ObjectHideFlags: 0
