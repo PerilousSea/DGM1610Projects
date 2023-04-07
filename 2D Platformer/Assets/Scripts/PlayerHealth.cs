@@ -1,11 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
+
    public int maxHealth = 10;
    public int currentHealth;
+   public int numberOfHearts;
+   public Image[] hearts;
+   public Sprite fullHeart;
+   public Sprite emptyHeart;
+   private void Update()
+   {
+     if(currentHealth > numberOfHearts)
+     {
+          currentHealth = numberOfHearts;
+     }
+     for(int i = 0; i < hearts.Length; i++)
+     {
+          if(i < currentHealth)
+          {
+               hearts[i].sprite = fullHeart;
+          }
+          else
+          {
+               hearts[i].sprite = emptyHeart;
+          }
+          if(i < numberOfHearts)
+          {
+               hearts[i].enabled = true;
+          }
+          else
+          {
+               hearts[i].enabled = false;
+          }
+     }
+   }
    private void Start()
    {
         Time.timeScale = 1;

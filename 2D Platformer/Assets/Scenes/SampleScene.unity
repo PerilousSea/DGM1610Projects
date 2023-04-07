@@ -465,7 +465,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6.4141746
+  orthographic size: 6.269552
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -544,7 +544,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0026112199, y: -0.101836175}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -555,7 +555,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.99477756, y: 0.78588265}
   m_EdgeRadius: 0
 --- !u!50 &634306084
 Rigidbody2D:
@@ -697,7 +697,7 @@ GameObject:
   - component: {fileID: 648281118}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -820,7 +820,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0027778335, y: -0.043519795}
+  m_Offset: {x: -0.0063665453, y: -0.076398715}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -831,7 +831,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06628884, y: 0.2329604}
+  m_Size: {x: 0.019862171, y: 0.16720256}
   m_EdgeRadius: 0
 --- !u!50 &648281113
 Rigidbody2D:
@@ -895,6 +895,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 0
+  numberOfHearts: 0
+  hearts: []
+  fullHeart: {fileID: 0}
+  emptyHeart: {fileID: 0}
 --- !u!114 &648281117
 MonoBehaviour:
   m_ObjectHideFlags: 0

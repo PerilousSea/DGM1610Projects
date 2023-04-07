@@ -32,7 +32,20 @@ public class PlayerController2D : MonoBehaviour
         {
             OnLandEvent = new UnityEvent();
         }
+
     }
+    /* public void InAir ()
+    {
+        animator.SetBool("IsJumping", true);
+    }
+    
+    
+    public void OnLanding ()
+	{
+		animator.SetBool("IsJumping", false);
+     
+	}
+    */
     public void Move(float move, bool jump)
 	{
 		var movement = Input.GetAxis("Horizontal");
@@ -42,29 +55,34 @@ public class PlayerController2D : MonoBehaviour
        //var movement = Input.GetAxis("Horizontal");
        transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
        if (!Mathf.Approximately(0, movement))
-       {
+        {
             transform.rotation = movement > 0 ? Quaternion.Euler(0, 180, 0) : Quaternion.identity;
             
-       }
+        }
        if(Input.GetButtonDown("Jump") && Mathf.Abs(_rigidbody.velocity.y) < 0.001f)
-       {
-            _rigidbody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-            animator.SetBool("IsJumping", true);
-       }
-             if(isGrounded)
         {
+            _rigidbody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            // animator.SetBool("IsJumping", true);
+        }
+        if(isGrounded)
+        {
+           // OnLanding();
             doubleJump = true;
         }
         if(Input.GetKeyDown(KeyCode.Space) && doubleJump)
         {
             _rigidbody.velocity = Vector2.up * jumpForce;
+           // animator.SetBool("IsJumping", true);
             doubleJump = false;
+            animator.SetTrigger("Jump_Trig");
         }
         else if(Input.GetKeyDown(KeyCode.Space) &&  !doubleJump && isGrounded)
         {
             _rigidbody.velocity = Vector2.up * jumpForce;
+            // animator.SetBool("IsJumping", false);
+            animator.SetTrigger("Jump_Trig");
         }
-		}
+	}
 		
 	
 
@@ -103,10 +121,6 @@ public class PlayerController2D : MonoBehaviour
        
     }
     */
-     public void OnLanding()
-        {
-        animator.SetBool("IsJumping", false);
-        } 
      void FixedUpdate()
         {
        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);

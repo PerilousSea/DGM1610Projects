@@ -14,8 +14,12 @@ public class EnemyAttack : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other) 
     {
-        playerHealth.TakeDamage(damage);
-        Debug.Log("Player Takes " + damage + " points of damage");
+        if(other.gameObject.CompareTag("Player"))
+        {
+                playerHealth.TakeDamage(damage);
+                Debug.Log("Player Takes " + damage + " points of damage");
+        }
+    
     }
 }
  
