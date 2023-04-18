@@ -57,8 +57,7 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
     }
-
-    /*
+    
     public void TakeDamage(int damage)
     {
         curHp -= damage;
@@ -68,19 +67,29 @@ public class PlayerController : MonoBehaviour
             Die();
         }
     }
-    */
+
+    void Die()
+    {
+        Debug.Log("Player has died");
+        Time.timeScale = 0;
+    }
+    public void GiveHealth()
+    {
+        Debug.Log("Player has been healed");
+    }
+    public void GiveAmmo()
+    {
+        Debug.Log("Player has collected Ammo");
+    }
 
     void Update()
     {
         Move();
         CamLook();
+        if(Input.GetButtonDown("Jump"))
+        {
+            Jump();
+        }
     }
-
-    /*
-    void Die()
-    {
-
-    }
-    */
-
+    
 }

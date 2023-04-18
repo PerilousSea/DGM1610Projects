@@ -9,19 +9,19 @@ public class PickUp : MonoBehaviour
         Health,
         Ammo
     }
-    public PickUpType;
+    public PickUpType type;
     public int healthAmount;
     public int ammoAmount;
    [Header("Bobbing Motion")]
     public float rotationSpeed;
     public float bobSpeed;
     public float bobHeight;
-    public float bobbingUp;
+    public bool bobbingUp;
     private Vector3 startPos;
     // Start is called before the first frame update
     void Start()
     {
-        startPos = 
+        startPos = transform.position; 
     }
 
     void OnTriggerEnter(Collider other)
@@ -31,11 +31,11 @@ public class PickUp : MonoBehaviour
             PlayerController player = other.GetComponent<PlayerController>();
             switch(type)
             {
-                case PickupType.Health:
+                case PickUpType.Health:
                 player.GiveHealth(healthAmount);
                 break;
 
-                case PickupType.Ammo:
+                case PickUpType.Ammo:
                 player.GiveAmmo(ammoAmount);
                 break;
 
@@ -51,8 +51,8 @@ public class PickUp : MonoBehaviour
     void Update()
     {
         transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
-        Vector3 offset = (bobbingUp == true ? new Vector3(0, bobheight / 2, 0) : new Vector3(0, -bobheight / 2, 0));
-        transform.positon = Vector3.MoveTowards(transform.position, startPos + offset, bobSpeed * Time.deltaTime);
+        Vector3 offset = (bobbingUp == true ? new Vector3(0, bobHeight / 2, 0) : new Vector3(0, -bobHeight / 2, 0));
+        transform.position = Vector3.MoveTowards(transform.position, startPos + offset, bobSpeed * Time.deltaTime);
         if(transform.position == startPos + offset)
         {
             bobbingUp = !bobbingUp;
