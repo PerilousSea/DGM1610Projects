@@ -73,15 +73,14 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Player has died");
         Time.timeScale = 0;
     }
-    public void GiveHealth()
+    public void GiveHealth(int amountToGive)
     {
         Debug.Log("Player has been healed");
     }
-    public void GiveAmmo()
+    public void GiveAmmo(int amountToGive)
     {
         Debug.Log("Player has collected Ammo");
     }
-
     void Update()
     {
         Move();

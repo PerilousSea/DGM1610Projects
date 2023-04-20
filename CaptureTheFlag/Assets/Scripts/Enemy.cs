@@ -64,7 +64,7 @@ public class Enemy : MonoBehaviour
     void UpdatePath()
     {
         NavMeshPath navMeshPath = new NavMeshPath();
-        NavMesh CaculatePath(transform.position, target.transform.position, NavMesh.AllAreas, navMeshPath);
+        NavMesh.CalculatePath(transform.position, target.transform.position, NavMesh.AllAreas, navMeshPath);
         path =  navMeshPath.corners.ToList();
     }
 }

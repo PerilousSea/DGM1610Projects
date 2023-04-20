@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
-    public enum PickUpType
+    public enum PickupType
     {
         Health,
         Ammo
     }
-    public PickUpType type;
+    public PickupType type;
     public int healthAmount;
     public int ammoAmount;
    [Header("Bobbing Motion")]
@@ -31,11 +31,11 @@ public class PickUp : MonoBehaviour
             PlayerController player = other.GetComponent<PlayerController>();
             switch(type)
             {
-                case PickUpType.Health:
+                case PickupType.Health:
                 player.GiveHealth(healthAmount);
                 break;
 
-                case PickUpType.Ammo:
+                case PickupType.Ammo:
                 player.GiveAmmo(ammoAmount);
                 break;
 
