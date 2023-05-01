@@ -10,12 +10,17 @@ public class HomeBase : MonoBehaviour
     void Start()
     {
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
-        flagRend = GameObject.Find("FlagHome").GetComponent<Renderer>();
+        flagRend = GameObject.Find("HomeFlag").GetComponent<Renderer>();
+        flagRend.enabled = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter(Collider other)
     {
-        
+        if(other.CompareTag("Player") && gm.hasFlag)
+        {
+            Debug.Log("Player has reached homebase!");
+            flagRend.enabled = true;
+        }
     }
+   
 }

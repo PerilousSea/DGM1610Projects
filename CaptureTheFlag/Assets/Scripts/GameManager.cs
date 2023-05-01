@@ -5,10 +5,14 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public bool hasFlag;
+    public bool flagPlaced;
+    public int scoreToWin;
+    public int curScore;
+    public bool gamePaused;
     public static GameManager instance;
     void Awake ()
     {
-        intance = this;
+        instance = this;
     }
     // Start is called before the first frame update
     void Start()
@@ -32,7 +36,31 @@ public class GameManager : MonoBehaviour
     }
     public void TogglePauseGame ()
     {
-        gamePaused = !gamePaused == true ? 0.0f : 1.0f;
-        Time.timeScale = gamePaused == true ? 
+        gamePaused = !gamePaused;
+        Time.timeScale = gamePaused == true ? 0.0f : 1.0f;
+        Cursor.lockState = gamePaused == true ? CursorLockMode.None : CursorLockMode.Locked;
+    }
+    public void AddScore(int score)
+    {
+        curScore += score;
+        if(curScore >= scoreToWin)
+        {
+            WinGame();
+        }
+    }
+    void WinGame()
+    {
+        Debug.Log("You've won the game!");
+        
+    }
+    public void LoseGame()
+    {
+        
+        Time.timeScale = 0.0f;
+        gamePaused = true;
+    }
+    public void PlaceFlag()
+    {
+        flagPlaced = true;
     }
 }
